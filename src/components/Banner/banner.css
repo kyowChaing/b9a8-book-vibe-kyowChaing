@@ -1,0 +1,18 @@
+.bgimg{
+    /* background-image: url(../../assets/img/bannerimg.png); */
+
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+
+.bgimg h3{
+    
+    font-size: 56px;
+    font-weight: 700;
+}
+
+.bbtn{
+        color: #fff;
+        border-radius: 8px;
+        background: rgb(35, 190, 10);
+}

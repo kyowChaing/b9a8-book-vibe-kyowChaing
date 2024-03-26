@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 export default function Navbar() {
@@ -26,11 +26,11 @@ export default function Navbar() {
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
         
-        
-        <li><Link> Home </Link> </li>
-        <li><Link> Listed Book </Link> </li>
-        <li><Link> Pages to Read </Link> </li>
-        <li><Link> Home </Link> </li>
+        <li><NavLink to="/"> Home </NavLink> </li>
+        <li><NavLink to="/listedBooks"> Listed Book </NavLink> </li>
+        <li><NavLink to="/pagesToRead"> Pages to Read  </NavLink> </li>
+        <li><NavLink to="/about"> About Us </NavLink> </li>
+        <li><NavLink to="/contact"> Contact Us </NavLink> </li>
       
     </ul>
   </div>

@@ -1,0 +1,81 @@
+[
+    {
+      "bookId": 1,
+      "bookName": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "image": "catcher.jpg",
+      "review": "A timeless classic that captures the angst of adolescence with remarkable insight.",
+      "totalPages": 224,
+      "rating": 4.5,
+      "category": "Fiction",
+      "tags": ["Coming-of-age", "Literary Fiction"],
+      "publisher": "Little, Brown and Company",
+      "yearOfPublishing": 1951
+    },
+    {
+      "bookId": 2,
+      "bookName": "1984",
+      "author": "George Orwell",
+      "image": "1984.jpg",
+      "review": "A chilling portrayal of a dystopian society that remains frighteningly relevant.",
+      "totalPages": 328,
+      "rating": 4.8,
+      "category": "Fiction",
+      "tags": ["Dystopian", "Political"],
+      "publisher": "Secker & Warburg",
+      "yearOfPublishing": 1949
+    },
+    {
+      "bookId": 3,
+      "bookName": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "image": "mockingbird.jpg",
+      "review": "A powerful narrative on racial injustice and moral growth, resonating across generations.",
+      "totalPages": 281,
+      "rating": 4.7,
+      "category": "Fiction",
+      "tags": ["Social Issues", "Southern Gothic"],
+      "publisher": "J. B. Lippincott & Co.",
+      "yearOfPublishing": 1960
+    },
+    {
+      "bookId": 4,
+      "bookName": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "image": "gatsby.jpg",
+      "review": "A captivating tale of love, wealth, and the American Dream, set against the backdrop of the Jazz Age.",
+      "totalPages": 180,
+      "rating": 4.6,
+      "category": "Fiction",
+      "tags": ["Romance", "Classic"],
+      "publisher": "Charles Scribner's Sons",
+      "yearOfPublishing": 1925
+    },
+    {
+      "bookId": 5,
+      "bookName": "Sapiens: A Brief History of Humankind",
+      "author": "Yuval Noah Harari",
+      "image": "sapiens.jpg",
+      "review": "An enlightening journey through the history of Homo sapiens, challenging conventional wisdom.",
+      "totalPages": 443,
+      "rating": 4.9,
+      "category": "Non-fiction",
+      "tags": ["History", "Anthropology"],
+      "publisher": "Harper",
+      "yearOfPublishing": 2011
+    },
+    {
+      "bookId": 6,
+      "bookName": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "image": "hobbit.jpg",
+      "review": "A delightful adventure that introduces readers to the enchanting world of Middle-earth.",
+      "totalPages": 310,
+      "rating": 4.8,
+      "category": "Fantasy",
+      "tags": ["Adventure", "Middle-earth"],
+      "publisher": "George Allen & Unwin",
+      "yearOfPublishing": 1937
+    }
+  ]
+  

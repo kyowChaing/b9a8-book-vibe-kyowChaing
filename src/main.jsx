@@ -13,6 +13,7 @@ import ErrorElement from './components/ErrorElement/ErrorElement.jsx';
 import PagesToRead from './components/PagesToRead/PagesToRead.jsx';
 import ListedBooks from './components/ListedBooks/ListedBooks.jsx';
 import Navbar from './components/Navbar/Navbar.jsx';
+import BookDetails from './components/BookDetails/BookDetails.jsx';
 
 
 
@@ -34,6 +35,11 @@ const router = createBrowserRouter([
       {
         path:'/listedBooks',
         element:<ListedBooks></ListedBooks>
+      },
+      {
+        path:'/bookDetails/:bookId',
+        loader:({params})=>fetch(`https://api.npoint.io/fd871112904acfcad1cd/${params.bookId}`),
+        element:<BookDetails></BookDetails>
       }
     ]
   },

@@ -1,17 +1,17 @@
 import { useState } from "react";
 import { NavLink, useLoaderData, useParams } from "react-router-dom";
 import { saveBooksIds } from "../../utilitis/storeBookId"
+import { saveWishList } from "../../utilitis/storeWishList";
+
 const BookDetails = () => {
 
-  // const [readsBooksIds,setReadsBooksIds]=useState([]);
-// const {bId}=useParams();
-
   const listReadsBooks=()=>{
+    saveBooksIds(bookId);
 
-    // const list = [ ...readsBooksIds,id]
-    //   setReadsBooksIds(list);
-    saveBooksIds(bookId)
+  }
 
+  const listWsihList = ()=>{
+    saveWishList(bookId);
   }
   // console.log(readsBooksIds);
   const book = useLoaderData();
@@ -57,7 +57,12 @@ const BookDetails = () => {
             <p>
               Rating : <span>{rating} </span>
             </p>
-            <button onClick={listReadsBooks} className="btn btn-primary">Get Started</button>
+            <button onClick={listReadsBooks} className="btn btn-primary">
+              Read
+            </button>
+            
+            <button onClick={listWsihList} className="btn btn-primary">WishList</button>
+
             {/* <button onClick={()=>{listReadsBooks(bookId)}} className="menu"> ol </button> */}
 
             {/*  */}

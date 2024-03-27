@@ -1,8 +1,23 @@
-import { NavLink, useLoaderData } from "react-router-dom";
-
+import { useState } from "react";
+import { NavLink, useLoaderData, useParams } from "react-router-dom";
+import { saveBooksIds } from "../../utilitis/storeBookId"
 const BookDetails = () => {
+
+  // const [readsBooksIds,setReadsBooksIds]=useState([]);
+// const {bId}=useParams();
+
+  const listReadsBooks=()=>{
+
+    // const list = [ ...readsBooksIds,id]
+    //   setReadsBooksIds(list);
+    saveBooksIds(bookId)
+
+  }
+  // console.log(readsBooksIds);
   const book = useLoaderData();
+
   const {
+    bookId,
     bookName,
     author,
     image,
@@ -14,6 +29,8 @@ const BookDetails = () => {
     publisher,
     yearOfPublishing,
   } = book;
+
+
   return (
     <div>
       <div className="hero min-h-screen bg-base-200">
@@ -28,7 +45,7 @@ const BookDetails = () => {
             <p className="py-6">{review}</p>
             <p>Tag {tags}</p>
             <p>
-              {" "}
+          
               Number of Pages: <span> {totalPages}</span>
             </p>
             <p>
@@ -40,8 +57,8 @@ const BookDetails = () => {
             <p>
               Rating : <span>{rating} </span>
             </p>
-            <button className="btn btn-primary">Get Started</button>
-            <button className="menu"> ol </button>
+            <button onClick={listReadsBooks} className="btn btn-primary">Get Started</button>
+            {/* <button onClick={()=>{listReadsBooks(bookId)}} className="menu"> ol </button> */}
 
             {/*  */}
             {/* <ul className="menu menu-horizontal px-1">

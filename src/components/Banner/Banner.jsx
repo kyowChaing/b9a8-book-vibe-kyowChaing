@@ -8,7 +8,7 @@ function Banner() {
     <div className='bgimg bg-[#F3F3F3] flex justify-around items-center'>
             <div>
               <h3 className=' text-black'> Books to freshen <br /> up your bookshelf</h3>
-              <Link> <button className='bbtn p-2 m-3 ' type="">View the List</button></Link>
+              <Link to={'/listedBooks'}> <button className='bbtn p-2 m-3 ' type="">View the List</button></Link>
             </div>
             <div className=' my-5'>
               <img src={hobbit} alt="" />

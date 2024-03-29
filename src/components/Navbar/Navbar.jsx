@@ -25,8 +25,8 @@ export default function Navbar() {
         <li><NavLink to="/"> Home </NavLink> </li>
         <li><NavLink to="/listedBooks"> Listed Book </NavLink> </li>
         <li><NavLink to="/pagesToRead"> Pages to Read  </NavLink> </li>
-        <li><NavLink to="/about"> About Us </NavLink> </li>
-        <li><NavLink to="/contact"> Contact Us </NavLink> </li>
+        <li><NavLink to="/aboutUs"> About Us </NavLink> </li>
+        <li><NavLink to="/contactUs"> Contact Us </NavLink> </li>
       
     </ul>
   </div>

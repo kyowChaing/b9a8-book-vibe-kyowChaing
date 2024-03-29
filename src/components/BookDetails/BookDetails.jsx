@@ -53,47 +53,49 @@ const BookDetails = () => {
     <div>
       <ToastContainer />
 
-      <div className="flex justify-center gap-11 pt-14">
-      <div className="rounded-[16px] bg-[#F3F3F3]">
-          <img src={image} className="max-w-sm rounded-lg shadow-2xl  max-w-sm max-h-96" />
+      <div className="flex justify-center gap-11 pt-14 mb-10">
+      <div className="rounded-[16px] bg-[#F3F3F3] flex justify-center items-center w-96">
+          <img src={image} className="rounded-lg w-72 h-96 " />
           </div>
 
           <div>
             <h1 className="text-5xl font-bold">{bookName}</h1>
-            <p className=" py-5">By : {author}</p>
+            <p className=" py-5 font-semibold">By : {author}</p>
             <hr />
-            <p className=" py-5">{category}</p>
+            <p className=" py-5 font-semibold">{category}</p>
             <hr />
-            <p className="py-5">{review}</p>
-            <div className=" flex justify-start gap-7">
-            <p>Tag</p>
+            <p className="py-5"><span className=" text-xl font-bold"> Review  </span>: {review}</p>
+            <div className=" flex justify-start gap-7 items-center">
+            <p className="font-semibold">Tag</p>
             <div>
               <span className=" bg-[#F4FCF3] text-[#57CE44] p-2 rounded-3xl">#{tags[0]} </span>
             </div>
             <span  className=" bg-[#F4FCF3] text-[#57CE44] p-2 rounded-3xl"> #{tags[1]}</span>
             </div>
-            
+
+            <hr className=" my-3" />
+            {/*  */}
             <div className=" flex justify-start gap-14">
             <p>
           
           Number of Pages:
         </p>
-        <span > {totalPages}</span>
+        <span className="font-bold" > {totalPages}</span>
             </div>
             
-            <div className=" flex justify-start gap-28">
+            <div className=" flex justify-start gap-28 items-center py-3">
             <p>
           
           Publisher:
         </p>
-        <span > {publisher}</span>
+        <span className="font-bold"> {publisher}</span>
             </div>
-            <div className=" flex justify-start gap-12">
+            <div className=" flex justify-start gap-12 items-center py-3">
             <p>
           
           Year of Publishing:
         </p>
-        <span > {yearOfPublishing}</span>
+        <span  className="font-bold" > {yearOfPublishing}</span>
             </div>
             
             <div className=" flex justify-start gap-32">
@@ -101,11 +103,11 @@ const BookDetails = () => {
           
           Rating :
         </p>
-        <span > {rating}</span>
+        <span  className="font-bold" > {rating}</span>
             </div>
 
 
-            <div className=" flex justify-start gap-8 mt-5">
+            <div className=" flex justify-start gap-8 py-5 ">
             <button onClick={()=>{listReadsBooks(bookId)}} className="btn btn-primary">
               Read
             </button>

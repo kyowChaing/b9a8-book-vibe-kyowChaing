@@ -1,17 +1,33 @@
 import { useState } from "react";
 import { NavLink, useLoaderData, useParams } from "react-router-dom";
-import { saveBooksIds } from "../../utilitis/storeBookId"
+import { saveBooksIds,getStoredBooksId} from "../../utilitis/storeBookId"
 import { saveWishList } from "../../utilitis/storeWishList";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const BookDetails = () => {
-
-  const listReadsBooks=()=>{
-    saveBooksIds(bookId);
+ 
+    const listReadsBooks=(id)=>{
+    const listedBooks =  getStoredBooksId();
+    if(!listedBooks.includes(id)){
+      saveBooksIds(id);
+      toast("Books Added to Read list");
+    }else{
+      toast("You have Already Read this Book !");
+    }
+    
 
   }
 
-  const listWsihList = ()=>{
-    saveWishList(bookId);
+  const listWsihList = (id)=>{
+
+    const listedBooks =  getStoredBooksId();
+    if(!listedBooks.includes(id)){
+      saveWishList(bookId);
+      toast("Books Added to WishList");
+    }else{
+      toast("You have Already Read this Book");
+    }
   }
   // console.log(readsBooksIds);
   const book = useLoaderData();
@@ -30,9 +46,12 @@ const BookDetails = () => {
     yearOfPublishing,
   } = book;
 
+  // const notify = () => toast("Wow so easy!");
+
 
   return (
     <div>
+      <ToastContainer />
 
       <div className="flex justify-center gap-11 pt-14">
       <div className="rounded-[16px] bg-[#F3F3F3]">
@@ -87,11 +106,11 @@ const BookDetails = () => {
 
 
             <div className=" flex justify-start gap-8 mt-5">
-            <button onClick={listReadsBooks} className="btn btn-primary">
+            <button onClick={()=>{listReadsBooks(bookId)}} className="btn btn-primary">
               Read
             </button>
             
-            <button onClick={listWsihList} className="btn btn-primary">WishList</button>
+            <button onClick={()=>{listWsihList(bookId)}} className="btn btn-primary">WishList</button>
             </div>
           </div>
           

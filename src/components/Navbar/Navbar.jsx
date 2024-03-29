@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 
 export default function Navbar() {
@@ -13,8 +13,8 @@ export default function Navbar() {
       <li><NavLink to="/"> Home </NavLink> </li>
         <li><NavLink to="/listedBooks"> Listed Book </NavLink> </li>
         <li><NavLink to="/pagesToRead"> Pages to Read  </NavLink> </li>
-        <li><NavLink to="/about"> About Us </NavLink> </li>
-        <li><NavLink to="/contact"> Contact Us </NavLink> </li>
+        <li><NavLink to="/aboutUs"> About Us </NavLink> </li>
+        <li><NavLink to="/contactUs"> Contact Us </NavLink> </li>
       </ul>
     </div>
     <a className="btn btn-ghost text-xl"> <NavLink to="/"> BookVibe</NavLink></a>

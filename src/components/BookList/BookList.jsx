@@ -13,7 +13,7 @@ const BookList = () => {
       <div>
         <h2 className=" text-center py-8 mt-8 text-4xl font-bold">Books</h2>
       </div>
-      <div className=" grid lg:grid-cols-3  gap-4 ">
+      <div className=" grid justify-center lg:grid-cols-3  gap-4 ">
         {
             books.map(book=> <Book key={book.bookId} book={book}> </Book>)
         }

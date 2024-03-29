@@ -33,61 +33,78 @@ const BookDetails = () => {
 
   return (
     <div>
-      <div className="hero min-h-screen bg-base-200">
-        <div className="hero-content flex-col lg:flex-row">
-          <img src={image} className="max-w-sm rounded-lg shadow-2xl" />
+
+      <div className="flex justify-center gap-11 pt-14">
+      <div className="rounded-[16px] bg-[#F3F3F3]">
+          <img src={image} className="max-w-sm rounded-lg shadow-2xl  max-w-sm max-h-96" />
+          </div>
+
           <div>
             <h1 className="text-5xl font-bold">{bookName}</h1>
-            <p>By : {author}</p>
+            <p className=" py-5">By : {author}</p>
             <hr />
-            <p>{category}</p>
+            <p className=" py-5">{category}</p>
             <hr />
-            <p className="py-6">{review}</p>
-            <p>Tag {tags}</p>
+            <p className="py-5">{review}</p>
+            <div className=" flex justify-start gap-7">
+            <p>Tag</p>
+            <div>
+              <span className=" bg-[#F4FCF3] text-[#57CE44] p-2 rounded-3xl">#{tags[0]} </span>
+            </div>
+            <span  className=" bg-[#F4FCF3] text-[#57CE44] p-2 rounded-3xl"> #{tags[1]}</span>
+            </div>
+            
+            <div className=" flex justify-start gap-14">
             <p>
           
-              Number of Pages: <span> {totalPages}</span>
-            </p>
+          Number of Pages:
+        </p>
+        <span > {totalPages}</span>
+            </div>
+            
+            <div className=" flex justify-start gap-28">
             <p>
-              Publisher: <span> {publisher}</span>
-            </p>
+          
+          Publisher:
+        </p>
+        <span > {publisher}</span>
+            </div>
+            <div className=" flex justify-start gap-12">
             <p>
-              Year of Publishing: <span>{yearOfPublishing}</span>
-            </p>
+          
+          Year of Publishing:
+        </p>
+        <span > {yearOfPublishing}</span>
+            </div>
+            
+            <div className=" flex justify-start gap-32">
             <p>
-              Rating : <span>{rating} </span>
-            </p>
+          
+          Rating :
+        </p>
+        <span > {rating}</span>
+            </div>
+
+
+            <div className=" flex justify-start gap-8 mt-5">
             <button onClick={listReadsBooks} className="btn btn-primary">
               Read
             </button>
             
             <button onClick={listWsihList} className="btn btn-primary">WishList</button>
-
-            {/* <button onClick={()=>{listReadsBooks(bookId)}} className="menu"> ol </button> */}
-
-            {/*  */}
-            {/* <ul className="menu menu-horizontal px-1">
-              <li>
-                <NavLink to="/"> Home </NavLink>{" "}
-              </li>
-              <li>
-                <NavLink to="/listedBooks"> Listed Book </NavLink>{" "}
-              </li>
-              <li>
-                <NavLink to="/pagesToRead"> Pages to Read </NavLink>{" "}
-              </li>
-              <li>
-                <NavLink to="/about"> About Us </NavLink>{" "}
-              </li>
-              <li>
-                <NavLink to="/contact"> Contact Us </NavLink>{" "}
-              </li>
-            </ul> */}
-            {/*  */}
-
+            </div>
           </div>
-        </div>
+          
+
       </div>
+
+      {/* <div className="hero min-h-screen bg-base-200">
+        <div className="hero-content flex-col lg:flex-row">
+         
+          
+        
+        </div>
+      </div> */}
     </div>
   );
 };

@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import star from "../../../public/star.jpeg";
 
 const Book = ({ book }) => {
-  const { bookName, image, author,bookId } = book;
+  const { bookName, image, author,bookId, rating,category} = book;
   return (
     <>
       <div className="">
@@ -11,8 +12,8 @@ const Book = ({ book }) => {
             {/* <figure>
               
             </figure> */}
-            <div className="flex justify-center items-center align-middle">
-            <img className="  h-96 w-64 " src={image} alt="" />
+            <div className="flex justify-center items-center bg-[#F3F3F3]">
+            <img className="  h-96 w-64  py-6 " src={image} alt="" />
             </div>
             
             <div className="card-body">
@@ -25,9 +26,10 @@ const Book = ({ book }) => {
                 {/* <div className="badge badge-secondary">NEW</div> */}
               </h2>
               <p>By: {author}</p>
-              <div className="card-actions justify-end">
-                <div className="badge badge-outline">Fashion</div>
-                <div className="badge badge-outline">Products</div>
+              <hr className=" border-dashed py-4" />
+              <div className="card-actions justify-between">
+                <div className="badge badge-outline">{category}</div>
+                <div className="badge badge-outline">{rating} <span><img className=" w-4 h-3 mx-1" src={star} alt="" /></span></div>
               </div>
             </div>
           </Link>

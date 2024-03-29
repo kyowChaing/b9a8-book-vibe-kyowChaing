@@ -6,10 +6,9 @@ const ReadsBooks = ({book}) => {
     // const readsBooks = useLoaderData();
     return (
         <>
-        <div className=" flex justify-around rounded-xl">
+        <div className=" flex gap-10 mb-6 rounded-xl ">
             <div className=" bg-[#F3F3F3]">
                 <img className=" w-32 h-36" src={image} alt="" />
-                
             </div>
             <div>
                 <div>

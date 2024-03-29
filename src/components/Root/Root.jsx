@@ -7,9 +7,11 @@ import Navbar from '../Navbar/Navbar';
 const Root = () => {
     return (
         <>
+            <div className=' max-w-[92%] m-auto'>
             <Navbar> </Navbar>
-           
-            <Outlet></Outlet>
+           <Outlet></Outlet>
+            </div>
+            
         </>
     );
 }

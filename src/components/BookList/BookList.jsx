@@ -11,7 +11,7 @@ const BookList = () => {
   return (
     <>
       <div>
-        <h2 className=" text-center">Book</h2>
+        <h2 className=" text-center py-8 mt-8 text-4xl font-bold">Books</h2>
       </div>
       <div className=" grid lg:grid-cols-3  gap-4 ">
         {

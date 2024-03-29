@@ -84,10 +84,10 @@ const ListedBooks = () => {
   return (
     <>
       <div>
-        <div className=" flex justify-center "> Books </div>
+        <div className=" flex justify-center bg-[#F3F3F3] font-bold text-3xl p-6"> Books </div>
         <div className="flex justify-center">
           <details className="dropdown">
-            <summary className="m-1 btn">Sort By <span><img className=" w-4 h-4" src={dropdownicon} alt="" /></span></summary>
+            <summary className="m-1 btn bg-[#23BE0A] my-6">Sort By <span><img className="" src={dropdownicon} alt="" /></span></summary>
             <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
               <li onClick={()=>{handleBookFilter("rating")}}>
                 <a>Rating</a>
